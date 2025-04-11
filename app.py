@@ -83,10 +83,10 @@ def predict_stress():
     if model is None or scaler is None:
         return jsonify({'error': 'Model or scaler not loaded'}), 500
 
-    if 'file' not in request.files:
+    if 'video' not in request.files:
         return jsonify({'error': 'No file provided'}), 400
 
-    file = request.files['file']
+    file = request.files['video']
     filename = os.path.join(UPLOAD_FOLDER, file.filename)
     try:
         file.save(filename)
