@@ -84,7 +84,7 @@ def predict_stress():
         return jsonify({'error': 'Model or scaler not loaded'}), 500
 
     if 'file' not in request.files:
-    return jsonify({'error': 'No file provided'}), 400
+        return jsonify({'error': 'No file provided'}), 400
 
     file = request.files['file']
 
