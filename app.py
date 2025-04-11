@@ -88,6 +88,7 @@ def predict_stress():
 
     file = request.files['file']
 
+
     filename = os.path.join(UPLOAD_FOLDER, file.filename)
     try:
         file.save(filename)
